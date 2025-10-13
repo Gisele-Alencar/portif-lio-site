@@ -3,99 +3,325 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lorem ipsum — Dark Landing</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <title>Marina Silva • UX/UI Designer</title>
+  <meta name="description" content="Portfólio UX/UI interativo com estudos de caso, processos e resultados." />
+  <meta name="theme-color" content="#0b0b17" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="theme-dark">
-  <header class="site-header container">
-    <div class="brand">
-      <div class="logo-dot"></div>
-      <h1 class="brand-title">Lorem ipsum</h1>
-    </div>
+<body>
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="spinner" role="status" aria-label="Carregando"></div>
+  </div>
 
-    <nav class="top-nav">
-      <a href="#">Inicio</a>
-      <a href="#">Serviços</a>
-      <a href="#">Contato</a>
-      <button id="themeToggle" aria-label="Alternar tema" class="toggle">
-        <span class="moon">●</span>
-      </button>
-    </nav>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#inicio" aria-label="Ir para início">Marina<span>Silva</span></a>
+
+      <nav class="nav" aria-label="Primária">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">
+          <span class="sr-only">Abrir menu</span>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="menu" class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a class="btn btn-ghost" href="curriculo.pdf" target="_blank" rel="noopener">Currículo</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <p class="kicker">Pequeno subtítulo, texto de navegação e contexto do site em uma só linha.</p>
-      <div class="constellation constellation--tr"></div>
-    </section>
-
-    <section class="about container" id="about">
-      <div class="section-lead">
-        <div class="bullet bullet--green"></div>
-        <h2>About Us</h2>
-        <p>Breve descrição com foco em acessibilidade e contraste em tema escuro, mantendo boa legibilidade em telas pequenas.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card card--primary">
-          <p>
-            Texto demonstrativo em um cartão de destaque com vidro fosco e brilho sutil. Utilize este bloco para apresentar missão, valores ou pitch do produto.
-          </p>
-        </article>
-
-        <article class="card card--small">
-          <p>
-            Cartão secundário sobreposto para listar um ponto-chave, insight do time ou métrica curta.
-          </p>
-        </article>
-      </div>
-
-      <div class="doodles">
-        <div class="spark spark--l"></div>
-        <div class="spark spark--r"></div>
-      </div>
-    </section>
-
-    <section class="spacer">
-      <!-- espaço intencional como no layout -->
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-curve" aria-hidden="true"></div>
-
-    <div class="footer-inner container">
-      <div class="footer-grid">
-        <div class="foot-col">
-          <h3>Contato</h3>
-          <p>contato@empresa.dev</p>
-          <p>+55 11 90000-0000</p>
+    <!-- Hero -->
+    <section id="inicio" class="hero section">
+      <div class="container grid-2">
+        <div class="hero-copy reveal">
+          <p class="kicker">UX/UI Designer</p>
+          <h1 class="gradient-title">Experiências digitais centradas no usuário</h1>
+          <p class="sub">Pesquisa, protótipos e testes para entregar produtos úteis, usáveis e desejáveis.</p>
+          <div class="cta">
+            <a class="btn" href="#projetos"><i class="fa-solid fa-folder-open"></i> Ver Projetos</a>
+            <a class="btn btn-ghost" href="#contato"><i class="fa-solid fa-paper-plane"></i> Falar</a>
+          </div>
+          <ul class="social">
+            <li><a href="https://linkedin.com/in/marinasilva-ux" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://behance.net/marinasilva" aria-label="Behance"><i class="fa-brands fa-behance"></i></a></li>
+            <li><a href="https://dribbble.com/marinasilva" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a></li>
+          </ul>
         </div>
-        <div class="foot-col">
-          <h3>Links</h3>
-          <a href="#">Sobre</a>
-          <a href="#">Carreiras</a>
-          <a href="#">Blog</a>
-        </div>
-        <div class="foot-col">
-          <h3>Social</h3>
-          <div class="socials">
-            <span class="soc"></span>
-            <span class="soc"></span>
-            <span class="soc"></span>
+
+        <div class="hero-visual reveal">
+          <div class="card depth">
+            <img src="assets/profile.jpg" alt="Foto de perfil de Marina Silva" loading="lazy" />
+            <div class="badge"><i class="fa-solid fa-location-dot"></i> São Paulo, SP</div>
+            <div class="stats">
+              <div><strong>120+</strong><span>Projetos</span></div>
+              <div><strong>4.7★</strong><span>Avaliações</span></div>
+              <div><strong>5</strong><span>Ferramentas</span></div>
+            </div>
           </div>
         </div>
       </div>
 
-      <p class="copy">© 2025 — Layout escuro com cartões brilhantes e curva no rodapé.</p>
-    </div>
+      <div class="parallax parallax-1" aria-hidden="true"></div>
+      <div class="parallax parallax-2" aria-hidden="true"></div>
+    </section>
 
-    <div class="footer-stars"></div>
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+      <div class="container narrow">
+        <h2 class="section-title reveal">Sobre</h2>
+        <p class="lead reveal">
+          Designer focada em pesquisa, ideação e validação contínua com usuários, conectando objetivos do negócio com necessidades reais.
+        </p>
+
+        <div class="about grid-2">
+          <div class="reveal">
+            <h3>Valores</h3>
+            <p>Design que elimina atritos e permite que pessoas alcancem objetivos com clareza e confiança.</p>
+            <ul class="ticks">
+              <li><i class="fa-solid fa-circle-check"></i> Centrado no ser humano</li>
+              <li><i class="fa-solid fa-circle-check"></i> Guiado por dados</li>
+              <li><i class="fa-solid fa-circle-check"></i> Acessível e inclusivo</li>
+            </ul>
+          </div>
+
+          <div class="timeline reveal">
+            <div class="item">
+              <span class="dot"></span>
+              <div>
+                <h4>Formação em Design</h4>
+                <p>Especialização em UX/UI e pesquisa com usuários.</p>
+              </div>
+            </div>
+            <div class="item">
+              <span class="dot"></span>
+              <div>
+                <h4>Projetos Mobile e Web</h4>
+                <p>Experiência com apps, plataformas e design systems.</p>
+              </div>
+            </div>
+            <div class="item">
+              <span class="dot"></span>
+              <div>
+                <h4>Resultados Mensuráveis</h4>
+                <p>Foco em métricas e impacto no negócio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="section alt">
+      <div class="container">
+        <h2 class="section-title reveal">Estudos de Caso</h2>
+
+        <div class="projects-grid">
+          <!-- Card 1 -->
+          <article class="project-card reveal">
+            <div class="thumb">
+              <img src="assets/ecotrack-thumb.jpg" alt="Mockup do app EcoTrack em smartphone" loading="lazy" />
+            </div>
+            <div class="content">
+              <h3>EcoTrack — App de Sustentabilidade</h3>
+              <p>Rastreie e reduza a pegada de carbono com gamificação e metas personalizadas.</p>
+              <ul class="tags">
+                <li>UX Research</li>
+                <li>Mobile</li>
+                <li>Prototyping</li>
+              </ul>
+              <button class="btn btn-small open-modal" data-target="#modal-1" aria-haspopup="dialog" aria-controls="modal-1">Ver detalhes</button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card reveal">
+            <div class="thumb">
+              <img src="assets/biblioteca-thumb.jpg" alt="Dashboard moderno de biblioteca digital" loading="lazy" />
+            </div>
+            <div class="content">
+              <h3>Biblioteca Digital — Redesign</h3>
+              <p>Busca inteligente, arquitetura clara e design system escalável.</p>
+              <ul class="tags">
+                <li>IA de Informação</li>
+                <li>Web</li>
+                <li>User Testing</li>
+              </ul>
+              <button class="btn btn-small open-modal" data-target="#modal-2" aria-haspopup="dialog" aria-controls="modal-2">Ver detalhes</button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card reveal">
+            <div class="thumb">
+              <img src="assets/foodshare-thumb.jpg" alt="Listagem e perfis de plataforma social de refeições" loading="lazy" />
+            </div>
+            <div class="content">
+              <h3>FoodShare — Plataforma Social</h3>
+              <p>Confiança por verificação, avaliações bidirecionais e chat seguro.</p>
+              <ul class="tags">
+                <li>Trust & Safety</li>
+                <li>Social</li>
+                <li>Community</li>
+              </ul>
+              <button class="btn btn-small open-modal" data-target="#modal-3" aria-haspopup="dialog" aria-controls="modal-3">Ver detalhes</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Modal 1 -->
+      <div id="modal-1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <button class="modal-close" aria-label="Fechar modal"><i class="fa-solid fa-xmark"></i></button>
+          <h3 id="modal-1-title" tabindex="-1">EcoTrack — App de Sustentabilidade</h3>
+          <p class="muted">Ferramentas: Figma, Miro, Maze</p>
+          <div class="modal-grid">
+            <div>
+              <h4>Contexto & Desafio</h4>
+              <p>Engajar comportamentos sustentáveis sem punição ou culpa.</p>
+              <h4>Processo</h4>
+              <p>Pesquisa (20 usuários) → Personas → Ideação → Protótipos → Testes.</p>
+            </div>
+            <div>
+              <h4>Solução</h4>
+              <p>Gamificação, tracking automático, metas personalizadas e comunidade.</p>
+              <h4>Resultados</h4>
+              <p><strong>85%</strong> concluíram onboarding; média <strong>4.7★</strong>.</p>
+            </div>
+          </div>
+          <img class="modal-hero" src="assets/ecotrack-case.jpg" alt="Fluxos e telas do EcoTrack" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <div id="modal-2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-2-title" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <button class="modal-close" aria-label="Fechar modal"><i class="fa-solid fa-xmark"></i></button>
+          <h3 id="modal-2-title" tabindex="-1">Biblioteca Digital — Redesign</h3>
+          <p class="muted">Ferramentas: Figma, Optimal Workshop, Hotjar</p>
+          <div class="modal-grid">
+            <div>
+              <h4>Contexto & Desafio</h4>
+              <p>Modernizar sistema legado mantendo funcionalidades essenciais.</p>
+              <h4>Processo</h4>
+              <p>Auditoria UX → Card sorting → Arquitetura → Design system.</p>
+            </div>
+            <div>
+              <h4>Solução</h4>
+              <p>Busca inteligente, dashboard personalizado e recomendações.</p>
+              <h4>Resultados</h4>
+              <p><strong>+60%</strong> tempo de permanência; <strong>-40%</strong> tickets.</p>
+            </div>
+          </div>
+          <img class="modal-hero" src="assets/biblioteca-case.jpg" alt="Fluxos e telas da Biblioteca Digital" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Modal 3 -->
+      <div id="modal-3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-3-title" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <button class="modal-close" aria-label="Fechar modal"><i class="fa-solid fa-xmark"></i></button>
+          <h3 id="modal-3-title" tabindex="-1">FoodShare — Plataforma Social</h3>
+          <p class="muted">Ferramentas: Figma, Principle, InVision, Zeplin</p>
+          <div class="modal-grid">
+            <div>
+              <h4>Contexto & Desafio</h4>
+              <p>Criar confiança no compartilhamento de comida caseira.</p>
+              <h4>Processo</h4>
+              <p>Design thinking → Jornada → Verificação → Prototipagem → Validação.</p>
+            </div>
+            <div>
+              <h4>Solução</h4>
+              <p>Verificação em camadas, avaliações e chat seguro.</p>
+              <h4>Resultados</h4>
+              <p>Validação com <strong>50</strong> usuários; interesse de <strong>3</strong> investidores.</p>
+            </div>
+          </div>
+          <img class="modal-hero" src="assets/foodshare-case.jpg" alt="Fluxos e telas da FoodShare" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Habilidades</h2>
+        <div class="skills">
+          <div class="skill reveal"><i class="fa-brands fa-figma"></i> Figma • 95%</div>
+          <div class="skill reveal"><i class="fa-solid fa-vector-square"></i> Adobe XD • 90%</div>
+          <div class="skill reveal"><i class="fa-solid fa-pen-ruler"></i> Sketch • 85%</div>
+          <div class="skill reveal"><i class="fa-solid fa-image"></i> Photoshop • 80%</div>
+          <div class="skill reveal"><i class="fa-solid fa-magnifying-glass"></i> Pesquisa de Usuários • 90%</div>
+          <div class="skill reveal"><i class="fa-solid fa-vial"></i> Testes de Usabilidade • 85%</div>
+          <div class="skill reveal"><i class="fa-solid fa-cubes"></i> Design System • 88%</div>
+          <div class="skill reveal"><i class="fa-solid fa-bolt"></i> Prototipagem • 95%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section alt">
+      <div class="container narrow">
+        <h2 class="section-title reveal">Contato</h2>
+        <p class="lead reveal">Aberta a entrevistas, freelas e estágios. Vamos conversar?</p>
+
+        <form class="contact-form reveal" aria-label="Formulário de contato" action="#" method="post" novalidate>
+          <div class="grid-2">
+            <label>
+              <span>Nome</span>
+              <input type="text" name="nome" required placeholder="Seu nome" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required placeholder="seu@email.com" />
+            </label>
+          </div>
+          <label>
+            <span>Mensagem</span>
+            <textarea name="mensagem" rows="5" required placeholder="Escreva sua mensagem"></textarea>
+          </label>
+          <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+          <p class="form-hint">
+            Também disponível em:
+            <a href="mailto:marina.silva@email.com">
+              <i class="fa-solid fa-envelope"></i> Email</a> ·
+            <a href="tel:+5511999999999">
+              <i class="fa-solid fa-phone"></i> +55 11 99999-9999</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Marina Silva — UX/UI Designer</p>
+      <nav aria-label="Rodapé">
+        <a href="#inicio">Topo</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
-</html>
+      </html>
