@@ -204,10 +204,74 @@
     </div>
 
     <!-- Profile Modal -->
-    <div id="profileModal" class="modal hidden"> ... </div>
+    <div id="profileModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🏆 Meu Perfil</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="profile-info">
+                    <div class="profile-avatar">👤</div>
+                    <h3 id="profileName">Nome do Usuário</h3>
+                    <div class="level-info">
+                        <div class="current-level">
+                            <span id="profileLevel">🌱 Iniciante do Bem</span>
+                            <span id="profilePoints" class="points">0 pontos</span>
+                        </div>
+                        <div class="level-progress">
+                            <div class="progress-bar">
+                                <div id="levelProgressBar" class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <small id="progressText">0 de 100 pontos para o próximo nível</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievements">
+                    <h4>🏅 Conquistas</h4>
+                    <div id="badgesList" class="badges-grid"></div>
+                </div>
+                <div class="stats">
+                    <h4>📊 Estatísticas</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" id="postsCount">0</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="repliesCount">0</span>
+                            <span class="stat-label">Respostas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="likesReceived">0</span>
+                            <span class="stat-label">Curtidas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="quizzesCompleted">0</span>
+                            <span class="stat-label">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Post Detail Modal -->
-    <div id="postDetailModal" class="modal hidden"> ... </div>
+    <div id="postDetailModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>💬 Discussão</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="postDetailContent"></div>
+                <div class="reply-form">
+                    <textarea id="replyContent" class="form-control" rows="3" placeholder="Deixe sua resposta positiva e construtiva..."></textarea>
+                    <button id="submitReplyBtn" class="btn btn--primary mt-8">Responder (+5 pontos)</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Toast Notifications -->
     <div id="toast" class="toast hidden">
@@ -219,4 +283,4 @@
 
     <script src="app.js"></script>
 </body>
-  </html>
+    </html>
